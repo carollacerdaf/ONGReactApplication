@@ -27,7 +27,7 @@ export default function NewIncident() {
 
             history.push('/profile');
         }catch(err){
-            alert("Erro: Incidente Não foi cadastrado");
+            return (document.getElementById("error-message").innerHTML = `Ops! Incidente não foi cadastrado.`)
         }
     }
     return (
@@ -55,11 +55,13 @@ export default function NewIncident() {
                         value={description}
                         onChange={e => setDescription(e.target.value)}/>
                     <input 
+                        id="valor"
                         placeholder="Valor em reais"
                         value={value}
                         onChange={e => setValue(e.target.value)}/>
 
                     <button type="submit" className="button">Cadastrar</button>
+                    <p className="error" id="error-message"></p>
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link ,useHistory} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api'
 import './style.css';
@@ -71,9 +71,9 @@ export default function Register() {
 
                     <button type="submit" className="button">Cadastrar</button>
                     <p className="error" id="error-message"></p>
-                <p className="success" id="success-message"></p>
+                    <p className="success" id="success-message"></p>
                 </form>
-               
+
             </div>
         </div>
     );

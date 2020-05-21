@@ -24,6 +24,8 @@ routes.post('/ongs', celebrate({
     })
 }), ongController.create);  
 
+//routes.get('/ong-first', ongController.idDefault)
+
 routes.get('/profile', celebrate({
     [Segments.HEADERS]: Joi.object({
         authorization: Joi.string().required(),

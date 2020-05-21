@@ -27,3 +27,8 @@ h1{
     font-size: 32px;
     margin-bottom: 32px;
  }
+
+ .default-id{
+     color: red;
+     margin-left:10px
+ }
