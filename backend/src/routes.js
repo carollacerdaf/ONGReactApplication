@@ -34,7 +34,7 @@ routes.get('/profile', celebrate({
 
 routes.post('/incidents', celebrate({
     [Segments.BODY]: Joi.object().keys({
-        title: Joi.string().required().max(10),
+        title: Joi.string().required().max(20),
         description: Joi.string().required().max(200),
         value:Joi.number().required(),
     }),
