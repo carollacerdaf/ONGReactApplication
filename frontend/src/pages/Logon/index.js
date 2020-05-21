@@ -35,13 +35,13 @@ export default function Logon(){
             <form onSubmit={handleLogin}>
                 <h1>Faça seu logon</h1>
 
-                <input placeholder="Sua ID"
+                <input name="user-id" placeholder="Sua ID"
                 value={id}
                 onChange={e => setId(e.target.value)}/>
                 <button className="button" type="submit">Entrar</button>
                 <p className="error" id="error-message"></p>
                 <p id="success-message"></p>
-                <Link className=".back-link" to="/register">
+                <Link className="back-link" to="/register">
                     <FiLogIn size={16} color="#E02041" />
                     Não tenho cadastro
                 </Link>
