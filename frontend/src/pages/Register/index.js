@@ -27,11 +27,10 @@ export default function Register() {
 
         try {
             const response = await api.post('ongs', data);
-
-            alert(`Seu ID de acesso: ${response.data.id}`);
+            return (document.getElementById("success-message").innerHTML = `Seu ID de acesso: ${response.data.id}`)
             history.push('/');
         } catch (err) {
-            alert('Erro no cadastro, tente novamente.')
+            return (document.getElementById("error-message").innerHTML = `Ops! Ocorreu um erro no cadastro.`)
         }
     }
     return (
@@ -71,7 +70,10 @@ export default function Register() {
                     </div>
 
                     <button type="submit" className="button">Cadastrar</button>
+                    <p className="error" id="error-message"></p>
+                <p className="success" id="success-message"></p>
                 </form>
+               
             </div>
         </div>
     );

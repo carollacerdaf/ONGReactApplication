@@ -79,3 +79,12 @@ form textarea {
  .back-link:hover{
     opacity: 0.8;
  }
+
+ .error{
+    color: red;
+    margin: 2px;
+}
+
+.success{
+    margin: 2px;
+}

@@ -22,7 +22,7 @@ export default function Logon(){
             history.push('/profile');
             
         } catch(err) {
-            alert('Falha no Login')
+            return (document.getElementById("error-message").innerHTML = `Falha no Login. Tente novamente.`)
         }
         
     }
@@ -39,7 +39,8 @@ export default function Logon(){
                 value={id}
                 onChange={e => setId(e.target.value)}/>
                 <button className="button" type="submit">Entrar</button>
-
+                <p className="error" id="error-message"></p>
+                <p id="success-message"></p>
                 <Link className=".back-link" to="/register">
                     <FiLogIn size={16} color="#E02041" />
                     Não tenho cadastro
