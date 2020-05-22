@@ -15,6 +15,8 @@ export default function Register() {
 
     const history = new useHistory();
 
+    
+
     async function handleRegister(e) {
         e.preventDefault(); //previne que a pag recarregue
         const data = {
@@ -27,7 +29,7 @@ export default function Register() {
 
         try {
             const response = await api.post('ongs', data);
-            return (document.getElementById("success-message").innerHTML = `Seu ID de acesso: ${response.data.id}`)
+            return (document.getElementById("success-message").innerHTML = `Seu ID de acesso: <span>${response.data.id}<span>`)
             history.push('/');
         } catch (err) {
             return (document.getElementById("error-message").innerHTML = `Ops! Ocorreu um erro no cadastro.`)
